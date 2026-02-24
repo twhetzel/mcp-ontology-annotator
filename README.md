@@ -154,3 +154,26 @@ ontology-annotator-mcp/
 ├── .env.example
 └── README.md
 ```
+
+## Release Steps
+Follow these steps to release a new tagged version in the repo and to update PyPI.
+```
+# 1. Update version in pyproject.toml
+# version = "0.1.1" or "0.2.0"
+
+# 2. Commit changes
+git commit -am "Version 0.1.1: Add improvements"
+
+# 3. Tag the release
+git tag v0.1.1
+git push && git push --tags
+
+# 4. Clean old builds
+rm -rf dist/
+
+# 5. Build new version
+python -m build
+
+# 6. Upload to the official PyPI site
+twine upload dist/*
+```
