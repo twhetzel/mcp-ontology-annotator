@@ -174,6 +174,6 @@ rm -rf dist/
 # 5. Build new version
 python -m build
 
-# 6. Upload to the official PyPi site
+# 6. Upload to the official PyPI site
 twine upload dist/*
 ```
