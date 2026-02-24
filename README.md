@@ -156,7 +156,7 @@ ontology-annotator-mcp/
 ```
 
 ## Release Steps
-Folllow these steps to release a new tagged version in the repo and to update PyPi.
+Follow these steps to release a new tagged version in the repo and to update PyPI.
 ```
 # 1. Update version in pyproject.toml
 # version = "0.1.1" or "0.2.0"
