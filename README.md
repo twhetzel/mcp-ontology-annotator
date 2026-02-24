@@ -166,7 +166,7 @@ git commit -am "Version 0.1.1: Add improvements"
 
 # 3. Tag the release
 git tag v0.1.1
-git push --tags
+git push && git push --tags
 
 # 4. Clean old builds
 rm -rf dist/
