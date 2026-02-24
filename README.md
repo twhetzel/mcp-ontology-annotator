@@ -1,4 +1,4 @@
-# ontology-annotator-mcp
+# MCP Ontology Annotator
 
 An MCP (Model Context Protocol) server for mapping biomedical text to standardized ontology terms.
 
@@ -24,7 +24,7 @@ An MCP (Model Context Protocol) server for mapping biomedical text to standardiz
 ```bash
 # Clone the repo
 git clone <repo-url>
-cd ontology-annotator-mcp
+cd mcp-ontology-annotator
 
 # Create and activate virtual environment with uv
 uv venv
