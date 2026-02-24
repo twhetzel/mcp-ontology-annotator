@@ -12,7 +12,7 @@ from mcp.server.stdio import stdio_server
 from mcp.types import TextContent, Tool
 
 from .annotator import OntologyAnnotator
-from .config import VALID_DOMAINS, get_settings
+from .config import VALID_DOMAINS, Settings, get_settings
 from .extractor import EntityExtractor, ExtractionError
 
 logging.basicConfig(level=logging.INFO)
@@ -154,7 +154,7 @@ def create_server() -> Server:
 
 
 async def _handle_annotate(
-    args: dict[str, Any], settings: Any
+    args: dict[str, Any], settings: Settings
 ) -> list[TextContent]:
     try:
         texts = _parse_texts(args.get("texts"))
@@ -188,7 +188,7 @@ async def _handle_annotate(
 
 
 async def _handle_extract(
-    args: dict[str, Any], settings: Any
+    args: dict[str, Any], settings: Settings
 ) -> list[TextContent]:
     text: str = args.get("text", "")
     if not text:

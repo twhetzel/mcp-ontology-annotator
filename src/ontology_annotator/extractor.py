@@ -120,11 +120,14 @@ class EntityExtractor:
             ):
                 idx = original_text.lower().find(entity_text.lower())
                 if idx == -1:
-                    # Use 0,0 as sentinel when not found
-                    start_pos, end_pos = 0, 0
-                else:
-                    start_pos = idx
-                    end_pos = idx + len(entity_text)
+                    logger.debug(
+                        "Discarding extracted entity (not found in text): %r [%s]",
+                        entity_text,
+                        domain,
+                    )
+                    continue
+                start_pos = idx
+                end_pos = idx + len(entity_text)
 
             validated.append(
                 {
