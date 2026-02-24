@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ontology-annotator"
+name = "mcp-ontology-annotator"
 version = "0.1.0"
 description = "MCP server for mapping biomedical text to standardized ontology terms"
 readme = "README.md"
